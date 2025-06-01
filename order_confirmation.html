@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="confirmation-page">
+    <div class="title-bar">Order Confirmation</div>
+
+    <div class="confirmation-content">
+      <h2>🎉 Your Order Has Been Placed!</h2>
+      <p class="subtitle">Thank you for ordering from Rainbow Books.</p>
+
+      <label>Order Number</label>
+      <div class="placeholder">#RB-20250531</div>
+
+      <label>Estimated Delivery</label>
+      <div class="placeholder">05/06/2025</div>
+
+      <div class="button-group">
+        <button class="btn-dark" onclick="goToOrders()">View Orders</button>
+        <button class="btn-light" onclick="goToInventory()">Back to Dashboard</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goToOrders() {
+      window.location.href = "reorder_form.html";
+    }
+
+    function goToInventory() {
+      window.location.href = "inventory_dashboard.html";
+    }
+  </script>
+</body>
+</html>

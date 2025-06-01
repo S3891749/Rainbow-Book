@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reorder Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reorder-page">
+    <div class="title-bar">Reorder Form</div>
+
+    <div class="form-history-container">
+      <!-- Reorder Form Section -->
+      <div class="reorder-content">
+        <h2>Request a Book Reorder</h2>
+
+        <label for="book">Select Book Title</label>
+        <select id="book">
+          <option value="">-- Choose a book --</option>
+          <option>The Great Gatsby</option>
+          <option>Harry Potter and the Goble</option>
+          <option>Digital Transformation 101</option>
+        </select>
+
+        <label for="quantity">Quantity to Reorder</label>
+        <input type="number" id="quantity" placeholder="Enter number of copies" min="1" />
+
+        <div class="button-group">
+          <button class="btn-dark" onclick="submitReorder()">Place Reorder</button>
+          <button class="btn-light" onclick="goToInventory()">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Reorder History Section -->
+      <div class="history-section">
+        <h3>📘 Reorder History</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Quantity</th>
+              <th>Date Requested</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The Great Gatsby</td>
+              <td>5</td>
+              <td>2025-05-28</td>
+              <td>Approved</td>
+            </tr>
+            <tr>
+              <td>Digital Transformation 101</td>
+              <td>3</td>
+              <td>2025-05-27</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>Harry Potter and the Goble</td>
+              <td>10</td>
+              <td>2025-05-25</td>
+              <td>Delivered</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function submitReorder() {
+      const book = document.getElementById('book').value;
+      const qty = document.getElementById('quantity').value;
+
+      if (!book || qty <= 0) {
+        alert("Please select a book and enter a valid quantity.");
+        return;
+      }
+
+      // Redirect to order confirmation page
+      window.location.href = "order_confirmation.html";
+    }
+
+    function goToInventory() {
+      window.location.href = "inventory_dashboard.html";
+    }
+  </script>
+</body>
+</html>

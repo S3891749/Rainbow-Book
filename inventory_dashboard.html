@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <ul>
+        <li onclick="goTo('inventory_dashboard.html')">📚 Inventory</li>
+        <li onclick="goTo('index.html')">🏠 Home</li>
+        <li onclick="goTo('reorder_form.html')">📦 Orders</li>
+        <li>📊 Reports</li>
+        <li onclick="Logout()">🔒 Logout</li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <div class="title-bar">Inventory Dashboard</div>
+      <div class="content">
+        <h2>Inventory Dashboard</h2>
+        <div class="table">
+          <div class="row header">
+            <span>Book Title</span>
+            <span>Current Stock</span>
+            <span>Status</span>
+            <span>Quantity to Order</span>
+          </div>
+
+          <div class="row"><input value="The Great Gatsby" /><input value="2" readonly /><input value="Low Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Harry Potter and the Goble" /><input value="15" readonly /><input value="In Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Digital Transformation 101" /><input value="0" readonly /><input value="Out of Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="The Lean Startup" /><input value="8" readonly /><input value="In Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Atomic Habits" /><input value="3" readonly /><input value="Low Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Data-Driven Design" /><input value="0" readonly /><input value="Out of Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Thinking Fast and Slow" /><input value="5" readonly /><input value="In Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Clean Code" /><input value="1" readonly /><input value="Low Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+          <div class="row"><input value="Introduction to Algorithms" /><input value="0" readonly /><input value="Out of Stock" readonly /><input type="number" min="0" placeholder="0" /></div>
+        </div>
+
+        <p id="confirmation-message" style="display: none;">Order submitted successfully</p>
+        <div class="button-group">
+          <button class="btn-primary" onclick="showConfirmation()">Submit Order</button>
+          <button class="btn-light">Cancel</button>
+          <button class="btn-dark" onclick="Reorder()">Reorder</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function goTo() {
+      window.location.href = "index.html";
+    }
+    function showConfirmation() {
+      document.getElementById('confirmation-message').style.display = 'block';
+    }
+    function Reorder() {
+      window.location.href = "reorder_form.html";
+    }
+    function Logout() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

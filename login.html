@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-page">
+    <div class="title-bar">Login Page</div>
+    <div class="login-content">
+      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Book Icon" class="login-image" />
+      <h1>Welcome to Rainbow Books</h1>
+      <p class="subtitle">Franchisee Portal</p>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button class="btn-dark" onclick="login()">Login</button>
+      <p class="link">Forgot password?</p>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      window.location.href = "inventory_dashboard.html";
+    }
+  </script>
+</body>
+</html>

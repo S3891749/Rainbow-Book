@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rainbow Book Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <ul>
+        <li onclick="goTo('inventory_dashboard.html')">📚 Inventory</li>
+        <li onclick="goTo('index.html')">🏠 Home</li>
+        <li onclick="goTo('reorder_form.html')">📦 Orders</li>
+        <li>📊 Reports</li>
+        <li onclick="Logout()">🔒 Login</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="title-bar">Welcome to Rainbow Book Store</div>
+
+      <!-- Promo Banner -->
+      <div class="promo-banner">
+        <div class="promo-text">
+            <p class="promo-sub">🌈 Discover Your Next Favorite Read</p>
+            <h1>From timeless classics to trending titles — curated collections updated weekly.</h1>
+            <a href="#" class="promo-link">📖 BROWSE BOOKS NOW</a>
+          </div>          
+        <div class="promo-image">
+          <img src="21948351_4300_7_03.jpg" alt="Get your book here" />
+        </div>
+      </div>
+
+      <!-- Browse Categories -->
+      <h2 class="section-title">📚 Browse Readings</h2>
+      <section class="highlight-section">
+        <div class="highlight-grid">
+          <div class="highlight-card blue">
+            <img src="Screenshot_2025-05-31_at_4.40.46_PM-removebg-preview.png" alt="Books" />
+            <h3>Books</h3>
+          </div>
+          <div class="highlight-card green">
+            <img src="Screenshot_2025-05-31_at_4.39.35_PM-removebg-preview.png" alt="Kids" />
+            <h3>Kids</h3>
+          </div>
+          <div class="highlight-card beige">
+            <img src="Screenshot_2025-05-31_at_4.38.07_PM-removebg-preview.png" alt="Gifts & stationery" />
+            <h3>Gifts & Stationery</h3>
+          </div>
+          <div class="highlight-card pink">
+            <img src="144623819_7bea692c-d85d-445e-a738-963481545d10.jpg" alt="New Arrivals" />
+            <h3>New Arrivals</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function goTo(url) {
+      window.location.href = url;
+    }
+    function Logout() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
